@@ -1,13 +1,21 @@
 <template>
-  <div id="app">    
+  <div id="app">
+    <Counter :startValue="10"/>    
+    <Counter :startValue="100"/>    
+    <CounterClass/>    
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator'
+import Counter from '@/components/Counter.vue'
+import CounterClass from '@/components/CounterClass.vue'
 
 @Component({
-  components: {    },
+  components:
+  {
+    Counter, CounterClass
+  },
 })
 export default class App extends Vue {}
 </script>
